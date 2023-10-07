@@ -1,8 +1,8 @@
 import { buildLoader } from "./buildLoader";
 import { buildPlugins } from "./buildPlugins";
 import { buildResolve } from "./buildResolve";
-import { BuildOptions } from "./types/config";
-import webpack from "webpack";
+import { type BuildOptions } from "./types/config";
+import type webpack from "webpack";
 import { buildDevServer } from "./buildDevServer";
 
 export function buildWebpackConfig(
@@ -10,7 +10,7 @@ export function buildWebpackConfig(
 ): webpack.Configuration {
   const { mode, paths, isDev } = options;
   return {
-    mode: mode,
+    mode,
     entry: paths.entry,
     output: {
       filename: "[name].[contenthash].js",

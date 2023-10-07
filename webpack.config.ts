@@ -1,6 +1,6 @@
-import webpack from "webpack";
+import type webpack from "webpack";
 import { buildWebpackConfig } from "./config/build/buildWebpackConfig";
-import { BuildPaths, BuildEnv } from "./config/build/types/config";
+import { type BuildPaths, type BuildEnv } from "./config/build/types/config";
 import path from "path";
 
 export default (env: BuildEnv) => {
