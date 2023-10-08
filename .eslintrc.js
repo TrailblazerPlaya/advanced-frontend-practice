@@ -7,7 +7,8 @@ module.exports = {
         "standard-with-typescript",
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
-        "prettier"
+        "prettier",
+        "plugin:i18next/recommended"
     ],
     "overrides": [
         {
@@ -27,7 +28,8 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "i18next"
     ],
     "rules": {
         "@typescript-eslint/explicit-function-return-type": "off",
@@ -41,6 +43,7 @@ module.exports = {
         "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/no-unnecessary-type-assertion": "off",
         "@typescript-eslint/prefer-nullish-coalescing": "off",
+        "i18next/no-literal-string": ['error', {markupOnly: true}]
     },
     "globals" : {
         '__IS_DEV__' : true
