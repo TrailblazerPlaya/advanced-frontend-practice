@@ -1,5 +1,17 @@
 {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "i18next.i18nPaths": "c:/Users/Fornara/Documents/GitHub/advanced-frontend-practice/public/locales,c:/Users/Fornara/Documents/GitHub/advanced-frontend-practice/src/shared/config/i18n"
+    "i18next.i18nPaths": "c:/Users/Fornara/Documents/GitHub/advanced-frontend-practice/public/locales,c:/Users/Fornara/Documents/GitHub/advanced-frontend-practice/src/shared/config/i18n,/F:/GitHub/advanced-frontend-practice/public/locales",
+    // "editor.inlineSuggest.enabled": true,
+    // "editor.quickSuggestions": {
+    //     "other": "inline",
+    //     "comments": true,
+    //     "strings": true
+    // },
+    "editor.quickSuggestionsDelay": 100,
+    "emmet.preferences": {},
+    "editor.tabCompletion": "onlySnippets",
+    "editor.snippetSuggestions": "top",
+    "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
+    "i18n-ally.keystyle": "flat"
 }
