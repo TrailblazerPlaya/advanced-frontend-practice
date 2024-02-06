@@ -20,9 +20,9 @@
             "module": "commonjs"
         }
     },
-    "include": ["src/**/*", "./config/jest/setupTests.ts"]
-
-    // "include": [
-    //     "./config/jest/setupTest.ts"
-    //   ]
+    "include": [
+        "./src/**/*.ts",
+        "./src/**/*.tsx",
+        "./config/jest/setupTests.ts"
+    ]
 }

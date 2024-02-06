@@ -1,53 +1,62 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
+    root: true,
+    env: {
+        browser: true,
+        es2021: true,
+        jest: true,
     },
-    "extends": [
-        "standard-with-typescript",
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime",
-        "prettier",
-        "plugin:i18next/recommended"
+    extends: ['plugin:react/recommended', 'plugin:i18next/recommended', 'prettier', 'plugin:storybook/recommended'],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+    },
+    plugins: [
+        'react',
+        '@typescript-eslint',
+        'i18next',
     ],
-    "overrides": [
-        {
-            "env": {
-                "node": true
+    rules: {
+        'react/jsx-indent': [2, 4],
+        'react/jsx-indent-props': [2, 4],
+        indent: [2, 4],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
+        'import/no-unresolved': 'off',
+        'import/prefer-default-export': 'off',
+        'no-unused-vars': 'off',
+        'react/require-default-props': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'react/function-component-definition': 'off',
+        'react/prop-types': 'off',
+        'no-shadow': 'off',
+        'import/extensions': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': [
+            'off',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to'],
             },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        ],
+        'max-len': ['error', { ignoreComments: true, code: 150 }],
     },
-    "plugins": [
-        "react",
-        "i18next"
-    ],
-    "rules": {
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/strict-boolean-expressions": "off",
-        "@typescript-eslint/no-floating-promises": "off",
-        "react/prop-types": "off",
-        "react/no-deprecated": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": "off",
-        "import/export-extension": "off",
-        "@typescript-eslint/naming-convention": "off",
-        "@typescript-eslint/no-unnecessary-type-assertion": "off",
-        "@typescript-eslint/prefer-nullish-coalescing": "off",
-        "i18next/no-literal-string": ['error', {markupOnly: true}],
+    globals: {
+        __IS_DEV__: true,
     },
-    "globals" : {
-        '__IS_DEV__' : true
-    }
-
-}
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
+};
