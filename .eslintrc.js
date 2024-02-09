@@ -5,7 +5,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'plugin:i18next/recommended', 'prettier', 'plugin:storybook/recommended'],
+    extends: ['plugin:react/recommended', 'plugin:i18next/recommended', 'prettier'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -34,6 +34,7 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'off',
         'react/function-component-definition': 'off',
+        'react/display-name': 'off',
         'react/prop-types': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
